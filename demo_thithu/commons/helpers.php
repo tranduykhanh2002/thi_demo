@@ -9,7 +9,7 @@ $capsule = new Capsule;
 $capsule->addConnection([
     'driver' => 'mysql',
     'host' => 'localhost',
-    'database' => 'thi_thu_php',
+    'database' => 'thi_php1_ver3',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',

@@ -49,11 +49,11 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="<?= BASE_URL . 'dashboard' ?>" class="nav-link px-2 text-secondary">Trang Quản Trị </a></li>
-                    <li><a href="<?= BASE_URL . 'admin/trang-chu' ?>" class="nav-link px-2 text-white">School</a></li>
-                    <li><a href="<?= BASE_URL .'admin/giao-vien'?>" class="nav-link px-2 text-white">Giao vien</a></li>
-                    <li><a href="<?= BASE_URL . 'admin/truong-hoc/tao-moi'?>" class="nav-link px-2 text-white">Them moi School</a></li>
-                    <li><a href="<?= BASE_URL . 'admin/giao-vien/tao-moi'?>" class="nav-link px-2 text-white">Them moi giao vien</a></li>
+                    <li><a href="<?= BASE_URL . 'admin/trang-chu' ?>" class="nav-link px-2 text-secondary">Trang Quản Trị </a></li>
+                    <li><a href="<?= BASE_URL . 'admin/trang-chu' ?>" class="nav-link px-2 text-white">Project</a></li>
+                    <li><a href="<?= BASE_URL .'member'?>" class="nav-link px-2 text-white">Member</a></li>
+                    <li><a href="<?= BASE_URL . 'admin/project/tao-moi'?>" class="nav-link px-2 text-white">Them moi project</a></li>
+                    <li><a href="<?= BASE_URL . 'admin/member/tao-moi'?>" class="nav-link px-2 text-white">Them moi member</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">About</a></li>
                     <li><a href="<?= BASE_URL . 'trang-chu' ?>" class="nav-link px-2 text-secondary">Trang Chủ </a></li>
                 </ul>

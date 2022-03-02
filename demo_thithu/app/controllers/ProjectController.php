@@ -1,43 +1,49 @@
 <?php 
 namespace App\Controllers;
+
+use App\Models\Project;
 use App\Models\School;
 use Illuminate\Contracts\View\View;
 
-class SchoolController{
+class ProjectController{
     public function addForm(){
-        include_once "./app/views/school/add-form.php";
+        include_once "./app/views/project/add-form.php";
 
     }
     public function create(){
         $data = [
             'name' => $_POST['name'],
-            'address' => $_POST['address'],
-            'logo' => $_POST['logo']
+            'code' => $_POST['code'],
+            'start_date' => $_POST['start_date'],
+            'end_date' => $_POST['end_date'],
+            'budget' => $_POST['budget'],
         ];
-        $model = new School();
+        $model = new Project();
         $model->insert($data);
         header('location:'.BASE_URL.'admin/trang-chu');
     }
     public function remove(){
         $idS = $_GET['id'];
-        School::destroy($idS);
+        Project::destroy($idS);
         header('location:'.BASE_URL.'admin/trang-chu');
     }
     public function updateForm(){
         $idS = $_GET['id'];
-        $getS = School::where('id',$idS)->get();
+        $getS = Project::where('id',$idS)->get();
         // var_dump($getS);
-        include_once "./app/views/school/update-form.php";
+        include_once "./app/views/project/update-form.php";
     }
     public function saveUpdate(){
         $idS = $_GET['id'];
         $data = [
             'name' => $_POST['name'],
-            'address' => $_POST['address'],
-            'logo' => $_POST['logo']
+            'code' => $_POST['code'],
+            'start_date' => $_POST['start_date'],
+            'end_date' => $_POST['end_date'],
+            'budget' => $_POST['budget'],
         ];
         // $model = new School();
-         School::where('id',$idS) -> update($data);
+         Project::where('id',$idS) -> update($data);
          header('location:'.BASE_URL.'admin/trang-chu');
     }
 }

@@ -20,13 +20,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Môn học</a>
+                        <a class="nav-link active" aria-current="page" href="#">Project</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Danh sách học sinh</a>
+                        <a class="nav-link active" aria-current="page" href="#">Member</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Thông tin kết quả kiểm tra</a>
+                        <a class="nav-link active" aria-current="page" href="#">Thông tin</a>
                     </li>
 
                 </ul>

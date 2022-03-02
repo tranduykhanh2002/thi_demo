@@ -1,17 +1,17 @@
 <?php 
 namespace App\Controllers;
-use App\Models\School;
-use App\Models\Teacher;
+use App\Models\Member;
+use App\Models\Project;
 
 class DashbroadController{
     public function index(){
-        $getS = School::all();
-        include_once "./app/views/school/index.php";
+        $getM = Member::all();
+        include_once "./app/views/member/index.php";
         // return "Chao mung den trang quan tri";
     }
-    public function indexT(){
-        $getT = Teacher::all();
-        include_once "./app/views/teacher/index.php";
+    public function indexP(){
+        $getP = Project::all();
+        include_once "./app/views/project/index.php";
         // return "Chao mung den trang quan tri";
     }
 }

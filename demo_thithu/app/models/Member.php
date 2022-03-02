@@ -1,8 +1,7 @@
 <?php 
-
 namespace App\Models;
 use ILLUMINATE\Database\Eloquent\Model;
-class Teacher extends Model{
-    protected $table = 'teachers';
+class Member extends Model {
+    protected $table = 'members';
     public $timestamps = false;
 }

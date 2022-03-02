@@ -1,8 +1,9 @@
 <?php
 namespace App\Helpers;
 use App\Controllers\DashbroadController;
-use App\Controllers\SchoolController;
-use App\Controllers\TeacherController;
+use App\Controllers\MemberController;
+use App\Controllers\ProjectController;
+use App\Models\Project;
 use \Phroute\Phroute\RouteCollector;
 class Route{
     public static function run($url){
@@ -16,19 +17,19 @@ class Route{
         // });
 
         $router->group(['prefix'=> 'admin'], function ($router){
-            $router->get('trang-chu',[DashbroadController::class,'index']);
-            $router->get('truong-hoc/tao-moi',[SchoolController::class,'addForm']);
-            $router->post('truong-hoc/tao-moi',[SchoolController::class,'create']);
-            $router->get('truong-hoc/xoa',[SchoolController::class,'remove']);
-            $router->get('truong-hoc/cap-nhat',[SchoolController::class,'updateForm']);
-            $router->post('truong-hoc/cap-nhat',[SchoolController::class,'saveUpdate']);
-            //teacher
-            $router->get('giao-vien',[DashbroadController::class,'indexT']);
-            $router->get('giao-vien/tao-moi',[TeacherController::class,'addForm']);
-            $router->post('giao-vien/tao-moi',[TeacherController::class,'create']);
-            $router->get('giao-vien/xoa',[TeacherController::class,'remove']);
-            $router->get('giao-vien/cap-nhat',[TeacherController::class,'updateForm']);
-            $router->post('giao-vien/cap-nhat',[TeacherController::class,'saveUpdate']);
+            $router->get('trang-chu',[DashbroadController::class,'indexP']);
+            $router->get('project/tao-moi',[ProjectController::class,'addForm']);
+            $router->post('project/tao-moi',[ProjectController::class,'create']);
+            $router->get('project/xoa',[ProjectController::class,'remove']);
+            $router->get('project/cap-nhat',[ProjectController::class,'updateForm']);
+            $router->post('project/cap-nhat',[ProjectController::class,'saveUpdate']);
+            //
+            $router->get('member',[DashbroadController::class,'index']);
+            $router->get('member/xoa',[MemberController::class,'remove']);
+            $router->get('member/tao-moi',[MemberController::class,'addForm']);
+            $router->post('member/tao-moi',[MemberController::class,'create']);
+            $router->get('member/cap-nhat',[MemberController::class,'updateForm']);
+            $router->post('member/cap-nhat',[MemberController::class,'saveUpdate']);
         });
 
         // $router->get('login', [LoginController::class, 'loginForm']);
@@ -47,7 +48,8 @@ class Route{
         //     });
             
         // });
-        $router->get('admin', [DashbroadController::class, 'index']);
+        $router->get('project/tao-moi',[ProjectController::class,'addForm']);
+        $router->get('member', [DashbroadController::class, 'index']);
         # NB. You can cache the return value from $router->getData() so you don't have to create the routes each request - massive speed gains
         $dispatcher = new \Phroute\Phroute\Dispatcher($router->getData());
 
